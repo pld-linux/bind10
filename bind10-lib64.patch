@@ -1,0 +1,12 @@
+--- bind10-1.0.0/configure.ac~	2013-02-21 13:19:24.000000000 +0100
++++ bind10-1.0.0/configure.ac	2013-02-21 22:59:06.391705702 +0100
+@@ -332,9 +332,6 @@
+ 	# option while having the library under a non trivial directory.
+ 	# as a workaround we try the "lib" sub directory under the common
+ 	# prefix for this python.
+-	if test -z "${PYTHON_LDFLAGS}"; then
+-		PYTHON_LDFLAGS="-L`${PYTHON}-config --prefix`/lib"
+-	fi
+ else
+ 	if test "X$PYTHON_INCLUDES" = X -o "X$PYTHON_LDFLAGS" = X; then
+ 		AC_MSG_WARN([${PYTHON}-config does not exist or is not executable, so we could not detect python development environment.  Your system may require an additional package (e.g. "python3-dev").  Alternatively, if you are sure you have python headers and libraries, define PYTHON_INCLUDES and PYTHON_LDFLAGS and run this script.])
